@@ -6,3 +6,4 @@ librosa
 tensorflow
 scikit-learn
 streamlit
+huggingface_hub
