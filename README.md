@@ -303,21 +303,22 @@ The application allows users to:
 ## Project Structure
 
 ```text
-Music-Genre-Classification/
+GitHub
 │
 ├── README.md
 ├── music_genre_classification.ipynb
 ├── app.py
 ├── requirements.txt
 │
-├── models/
-│   └── music_genre_classifier.keras
-│
 └── results/
-    ├── experiment_results.csv
+    ├── experiment_results.md
     ├── final_accuracy.png
     ├── final_loss.png
     └── final_confusion_matrix.png
+     
+Hugging Face
+│
+└── music_genre_classifier.keras
 ```
 
 ---
@@ -339,6 +340,11 @@ streamlit run app.py
 The application will open in the browser.
 
 ---
+## Trained Model
+
+The trained CNN model is hosted on Hugging Face:
+
+[View / Download Model](https://huggingface.co/Laibsss/music-genre-classification)
 
 ## Author
 
