@@ -37,16 +37,22 @@ GENRES = [
     "rock"
 ]
 
-MODEL_PATH = "music_genre_classifier.keras"
+from huggingface_hub import hf_hub_download
 
+MODEL_REPO = "Laibsss/music-genre-classification"
+MODEL_FILENAME = "music_genre_classifier.keras"
 
-# =========================================================
-# LOAD MODEL
-# =========================================================
 
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model(MODEL_PATH)
+
+    model_path = hf_hub_download(
+        repo_id=MODEL_REPO,
+        filename=MODEL_FILENAME,
+        repo_type="model"
+    )
+
+    return tf.keras.models.load_model(model_path)
 
 
 model = load_model()
